@@ -5,8 +5,11 @@ import { X, ExternalLink, Download, Mail, Github, Linkedin } from 'lucide-react'
 export const WaffleMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const resumeUrl = import.meta.env.BASE_URL + 'calvin_karthik_resume.pdf';
+
+
   const menuItems = [
-    { title: 'Resume', icon: Download, action: () => window.open('#resume', '_blank'), external: false },
+    { title: 'Resume', icon: Download, action: () => window.open(resumeUrl, '_blank', 'noopener,noreferrer'), external: true },
     { title: 'GitHub', icon: Github, action: () => window.open('https://github.com/calvinkarthik', '_blank'), external: true },
     { title: 'LinkedIn', icon: Linkedin, action: () => window.open('https://linkedin.com/in/calvinkarthik', '_blank'), external: true },
     { title: 'Email', icon: Mail, action: () => window.open('mailto:calvin.g.karthik@gmail.com'), external: false },
